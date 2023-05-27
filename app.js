@@ -38,7 +38,7 @@ app.use(bodyParser.urlencoded({
 // 解析 x-www-form-urlencoded 格式的表单数据
 app.use(express.urlencoded({ extended: false }))
 
-app.use(formidable());
+// app.use(formidable());
 
 app.use((req, res, next) => {
     res.cc = function (err, status = 1) {

@@ -2,7 +2,7 @@ const express = require('express')
 const multer = require('multer')
 // const user_photo = require('../schema/userinfo')
 
-// const router = express.Router()
+const router = express.Router()
 
 // const storage = multer.diskStorage({
 //     destination:function(req,file,cb)
@@ -15,11 +15,11 @@ const multer = require('multer')
 //     }
 // })
 
-const upload = multer({storage:storage})
+// const upload = multer({storage:storage})
 
 const userinfo_handle = require('../router_handle/userinfo')
 //获取用户信息
-router.post('/postmsg',upload.single("photo"),userinfo_handle.postmsg)
+router.post('/postmsg',userinfo_handle.postmsg)
 
 router.get('/getmsg',userinfo_handle.getmsg)
 
